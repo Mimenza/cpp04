@@ -58,3 +58,8 @@ void Dog::makeSound(void)const
 {
 	std::cout << this->_type << " says: **Wooffff woff**" << std::endl;
 }
+
+Brain *Dog::getBrain(void)const
+{
+	return this->_brain;
+}

@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <sstream>
 
 class Brain
 {
@@ -26,6 +27,8 @@ class Brain
         Brain(const Brain &copy);
         virtual ~Brain();
         Brain &operator=(const Brain &src);
+
+        std::string	getIdea(int i) const;
 };
 
 #endif

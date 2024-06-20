@@ -27,6 +27,8 @@ class Cat: public Animal
         ~Cat();
         Cat &operator=(const Cat &src);
         void makeSound(void)const;
+
+        Brain *getBrain()const;
 };
 
 #endif

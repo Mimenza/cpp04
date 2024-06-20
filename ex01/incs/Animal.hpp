@@ -17,6 +17,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
+#include "Brain.hpp"
 
 class Animal
 {
@@ -30,6 +31,7 @@ class Animal
         Animal &operator=(const Animal &src);
         virtual void makeSound(void)const;
         std::string getType(void)const;
+        virtual Brain* getBrain() const = 0;
 };
 
 #endif

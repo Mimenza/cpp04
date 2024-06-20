@@ -15,6 +15,13 @@
 Brain::Brain()
 {
 	std::cout << "Brain Default Constructor called" << std::endl;
+	std::stringstream ss;
+	for (int i = 0; i < 100; i++)
+	{
+		ss << i;
+		std::string str = ss.str();
+		this->_ideas[i] = "Idea[" + str + "]";
+	}
 }
 
 Brain::Brain(const Brain &copy)
@@ -23,18 +30,17 @@ Brain::Brain(const Brain &copy)
 	*this = copy;
 }
 
-// Deconstructors
 Brain::~Brain()
 {
 	std::cout << "Brain Deconstructor called" << std::endl;
 }
 
-// Overloaded Operators
 Brain &Brain::operator=(const Brain &src)
 {
 	std::cout << "Brain Assignation operator called" << std::endl;
 	if (this == &src)
 		return *this;
+
 	for (int i = 0; i < 100; i++)
 	{
 		if (src._ideas[i].length() > 0)
@@ -43,4 +49,7 @@ Brain &Brain::operator=(const Brain &src)
 	return *this;
 }
 
-// Public Methods
+std::string	Brain::getIdea(int i) const
+{
+	return this->_ideas[i];
+}
