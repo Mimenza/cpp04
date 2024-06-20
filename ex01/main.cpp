@@ -19,21 +19,27 @@
 
 int main()
 {
-	Animal* Zoo[10];
-	for (int i = 0; i < 10; i++)
-	{
-		if (i % 2 == 0)
-			Zoo[i] = new Dog();
-		else
-			Zoo[i] = new Cat();
-	}
+	// Animal* Zoo[10];
+	// for (int i = 0; i < 10; i++)
+	// {
+	// 	if (i % 2 == 0)
+	// 		Zoo[i] = new Dog();
+	// 	else
+	// 		Zoo[i] = new Cat();
+	// }
 
-    std::cout << "The type is: " << Zoo[4]->getType() << std::endl;
-    std::cout << "The idea is: " << Zoo[4]->getBrain()->getIdea(1) << std::endl;
+    // std::cout << "The type is: " << Zoo[4]->getType() << std::endl;
+    // std::cout << "The idea is: " << Zoo[4]->getBrain()->getIdea(1) << std::endl;
    
-    for (int i = 0; i < 10; i++)
-	{
-		Zoo[i]->makeSound();
-		delete Zoo[i];
-	}
+    // for (int i = 0; i < 10; i++)
+	// {
+	// 	Zoo[i]->makeSound();
+	// 	delete Zoo[i];
+	// }
+
+	// Dog basic;
+	// {
+	// 	Dog tmp = basic;
+	// }
+	// std::cout << "PATATAAAAA" << std::endl;
 }

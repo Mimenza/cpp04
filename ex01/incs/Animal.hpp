@@ -29,7 +29,7 @@ class Animal
         Animal(const Animal &copy);
         virtual ~Animal();
         Animal &operator=(const Animal &src);
-        virtual void makeSound(void)const;
+        virtual void makeSound(void)const= 0;
         std::string getType(void)const;
         virtual Brain* getBrain() const = 0;
 };
