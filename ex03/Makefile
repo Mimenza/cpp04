@@ -6,7 +6,7 @@
 #    By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/20 16:01:46 by emimenza          #+#    #+#              #
-#    Updated: 2024/06/20 16:02:13 by emimenza         ###   ########.fr        #
+#    Updated: 2024/06/23 18:39:05 by emimenza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,12 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 NAME = interface
 
-SRCS = main.cpp
+SRCS = srcs/AMateria.cpp\
+		srcs/Character.cpp\
+		srcs/Cure.cpp\
+		srcs/Ice.cpp\
+		srcs/MateriaSource.cpp\
+		main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
