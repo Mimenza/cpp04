@@ -51,5 +51,19 @@ Brain &Brain::operator=(const Brain &src)
 
 std::string	Brain::getIdea(int i) const
 {
+	if (i < 0 || i > 99)
+	{
+		return "Idea not available";
+	}
 	return this->_ideas[i];
+}
+
+void Brain::setIdea(std::string str, int i)
+{
+	if (i < 0 || i > 99)
+	{
+		std::cout << "Can't set the idea" << std::endl;
+		return;
+	}
+	_ideas[i] = str;
 }

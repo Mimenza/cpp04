@@ -29,8 +29,11 @@ int main()
 	}
 
     std::cout << "The type is: " << Zoo[4]->getType() << std::endl;
-    std::cout << "The idea is: " << Zoo[4]->getBrain()->getIdea(1) << std::endl;
+    std::cout << "The idea is: " << Zoo[4]->getBrain()->getIdea(101) << std::endl;
    
+	Zoo[4]->getBrain()->setIdea("patata", 100);
+
+    std::cout << "The idea is: " << Zoo[4]->getBrain()->getIdea(1) << std::endl;
     for (int i = 0; i < 10; i++)
 	{
 		Zoo[i]->makeSound();
