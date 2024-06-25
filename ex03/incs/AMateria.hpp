@@ -6,33 +6,35 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:02:51 by emimenza          #+#    #+#             */
-/*   Updated: 2024/06/20 16:17:18 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/06/23 19:21:10 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
+#ifndef	AMATERIA_HPP
 # define AMATERIA_HPP
 
-# include <string>
-# include <iostream>
 # include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {
     protected:
-        std::string _materia_type;
+        std::string	_type;
 
     public:
-        AMateria(std::string const & type);
-        
-        AMateria();
-        AMateria(const AMateria &copy);
-        virtual ~AMateria();
-        AMateria &operator=(const AMateria &src);
-        
-        std::string const & getType() const; //Returns the materia type
-        virtual AMateria* clone() const = 0;
-        virtual void use(ICharacter& target);
+        AMateria( void );
+        AMateria( std::string const &type );
+        AMateria( AMateria const &a );
+
+        AMateria	&operator=( const AMateria &a );
+
+        std::string const	&getType( void ) const;
+
+        virtual	AMateria	*clone( void ) const = 0;
+        virtual	void		use( ICharacter &target );
+
+        virtual	~AMateria();
 };
 
 #endif

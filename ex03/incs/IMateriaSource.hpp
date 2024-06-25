@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 18:32:38 by emimenza          #+#    #+#             */
-/*   Updated: 2024/06/23 18:32:38 by emimenza         ###   ########.fr       */
+/*   Created: 2024/06/23 18:33:03 by emimenza          #+#    #+#             */
+/*   Updated: 2024/06/23 18:33:03 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef	IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
-# include <iostream>
 # include "AMateria.hpp"
 
-class AMateria;
-
-class ICharacter
+class IMateriaSource
 {
     public:
-        virtual ~ICharacter() {}
+        virtual	void		learnMateria( AMateria* ) = 0;
+        virtual	AMateria*	createMateria( std::string const &type ) = 0;
 
-        virtual	std::string	const	&getName( void ) = 0;
-        virtual	void				equip( AMateria	*m ) = 0;
-        virtual	void				unequip( int	idx ) = 0;
-        virtual	void				use( int idx, ICharacter	&target ) = 0;
-
+        virtual	~IMateriaSource() {}
 };
 
-#endif
+# endif
