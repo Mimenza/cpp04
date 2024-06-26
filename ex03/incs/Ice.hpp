@@ -17,16 +17,16 @@
 
 class Ice: public AMateria
 {
-public:
-	Ice( void );
-	Ice( const Ice &i );
+	public:
+		Ice( void );
+		Ice( const Ice &i );
 
-	Ice	&operator=( const Ice &i );
+		Ice	&operator=( const Ice &i );
 
-	AMateria	*clone( void ) const;
-	void		use( ICharacter &target );
+		AMateria	*clone( void ) const;
+		void		use( ICharacter &target );
 
-	~Ice();
+		~Ice();
 };
 
 #endif
