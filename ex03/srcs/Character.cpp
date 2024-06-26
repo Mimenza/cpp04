@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:10:15 by emimenza          #+#    #+#             */
-/*   Updated: 2024/06/23 18:36:27 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:25:43 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,16 +90,22 @@ void	Character::equip( AMateria	*m )
 	}
 }
 
-void	Character::unequip( int	idx )
+void	Character::unequip( int	id )
 {
-	if (idx < 4 && idx >= 0 && this->_inventory[idx] != NULL)
-		delete (this->_inventory[idx]);
+	if (id < 4 && id >= 0 && this->_inventory[id] != NULL)
+	{
+		//floor[f_index] = this->_inventory[id];
+		floor.push_back(this->_inventory[id]);
+        this->_inventory[id] = NULL;
+	}
+	//this->_inventory[id] = NULL;
+	//delete (this->_inventory[id]);
 }
 
-void	Character::use( int idx, ICharacter	&target )
+void	Character::use( int id, ICharacter	&target )
 {
-	if (idx >= 0 && idx < 4 && this->_inventory[idx] != NULL)
-		this->_inventory[idx]->use(target);
+	if (id >= 0 && id < 4 && this->_inventory[id] != NULL)
+		this->_inventory[id]->use(target);
 }
 
 Character::~Character()
@@ -112,4 +118,7 @@ Character::~Character()
 			delete (this->_inventory[i]);
 		i++;
 	}
+	
+	for (std::vector<AMateria*>::iterator it = floor.begin(); it != floor.end(); ++it)
+        delete *it;
 }
