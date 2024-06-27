@@ -13,7 +13,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 
 RM = rm -rf
-NAME = ex01
+NAME = ex02
 
 SRCS = srcs/Animal.cpp\
 	   srcs/Cat.cpp\
