@@ -29,6 +29,7 @@ class Cat: public Animal
         void makeSound(void)const;
 
         Brain *getBrain()const;
-};
+        std::string getIdea(int id);
+};      
 
 #endif

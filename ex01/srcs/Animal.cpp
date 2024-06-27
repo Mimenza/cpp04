@@ -47,3 +47,9 @@ std::string	Animal::getType(void)const
 {
     return (this->_type);
 }
+
+std::string Animal::getIdea(int id)
+{
+	(void)id;
+    return "";
+}

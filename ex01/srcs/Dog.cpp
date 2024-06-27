@@ -63,3 +63,8 @@ Brain *Dog::getBrain(void)const
 {
 	return this->_brain;
 }
+
+std::string Dog::getIdea(int id)
+{
+	return getBrain()->getIdea(id);
+}

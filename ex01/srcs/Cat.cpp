@@ -63,3 +63,8 @@ Brain *Cat::getBrain(void)const
 {
 	return this->_brain;
 }
+
+std::string Cat::getIdea(int id)
+{
+	return getBrain()->getIdea(id);
+}
