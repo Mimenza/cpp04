@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:10:15 by emimenza          #+#    #+#             */
-/*   Updated: 2024/06/26 15:25:43 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/06/27 13:38:15 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ void	Character::equip( AMateria	*m )
 		}
 		i++;
 	}
+	if (i == 4)
+		delete m;
 }
 
 void	Character::unequip( int	id )
